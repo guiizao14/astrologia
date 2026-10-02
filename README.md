@@ -8,10 +8,13 @@ interativo **Seu Mapa, Seu 2027**, vendido por R$19,90.
 | Arquivo | O que tem |
 | --- | --- |
 | `index.html` | Textos comerciais, seções, FAQ e rodapé |
+| `termos.html`, `privacidade.html` | Termos de uso e Política de privacidade |
 | `styles.css` | Visual, responsividade e animações |
-| `app.js` | Checkout, Pixel, timer, prova social, galeria, FAQ e revelação ao rolar |
-| `config.js` | **Tudo que muda sem mexer no código:** link do checkout, Pixel, timer, prova social, capa e prévias |
-| `assets/previas/` | Capa e páginas reais do PDF final |
+| `app.js` | Checkout, Pixel, timer, prova social, galeria, FAQ, rodapé e revelação ao rolar |
+| `legal.js` | Preenche vendedor e suporte nas páginas legais |
+| `config.js` | **Tudo que muda sem mexer no código:** checkout, Pixel, timer, prova social, capa, prévias e dados do vendedor |
+| `assets/previas/` | Capa e 3 páginas reais do PDF final (p. 1, 6, 8 e 12) |
+| `favicon.svg` | Ícone da aba |
 
 ## Rodar localmente
 
@@ -29,19 +32,29 @@ Adicione `?movimento` à URL para ver as animações num computador com
 Netlify, Vercel, Cloudflare Pages ou GitHub Pages: publique a raiz do
 repositório, sem comando de build.
 
-## Antes de publicar ou liberar tráfego
+## Feito
+
+- [x] Capa e prévias: páginas reais do `Seu-Mapa-Seu-2027-Guia-Interativo-PREMIUM.pdf` (37 páginas).
+- [x] "O que você recebe" conferido com o PDF final (36 fichas, tabela clicável, campos preenchíveis, glossário).
+- [x] Textos de Sol, Lua e Ascendente alinhados com as perguntas das lentes do PDF.
+- [x] Aviso do mapa natal: o guia não calcula, mas indica onde gerar (como no PDF, p. 5).
+- [x] FAQ completo, incluindo entrega por e-mail, uso no celular e reembolso em 7 dias (CDC, art. 49).
+- [x] Rodapé com Termos de uso e Política de privacidade.
+- [x] Timer de demonstração desligado: conta até `offerEndsAt`, igual para todos, e some no fim.
+- [x] Etiquetas de pendência escondidas (`showPendingBadges: false`).
+- [x] Coerência com o anúncio em vídeo: Sol, Lua e Ascendente, "novo ciclo", 2027 e R$19,90.
+
+## Falta (só você tem esses dados)
 
 Em `config.js`:
 
 - [ ] `checkoutUrl`: link real do checkout Zuptos. Sem ele, os botões só mostram um aviso.
 - [ ] `metaPixelId`: ID do Meta Pixel. `Purchase` fica com o checkout, nunca com o clique.
-- [ ] `coverImage` e `previews`: capa e páginas reais do PDF final.
-- [ ] `showPendingBadges: false` para esconder as etiquetas de pendência.
+- [ ] `operatorName`, `operatorDoc` e `supportEmail`: quem vende (nome e CPF/CNPJ) e o e-mail de suporte.
+- [ ] `offerEndsAt`: confirmar a data de fim da oferta (hoje: 05/10/2026, 14h). O preço precisa mudar de verdade na Zuptos quando o timer acabar.
 
-No conteúdo:
+Depois de configurar:
 
-- [ ] Conferir a lista "O que você recebe" e as frases de Sol, Lua e Ascendente com o PDF final.
-- [ ] Completar a última pergunta do FAQ com o fluxo real de entrega da Zuptos.
-- [ ] Rodapé: identificação da operação, contato de suporte, Termos de uso e Política de privacidade.
-- [ ] Revisão final de coerência entre landing, PDF, checkout e criativos.
-- [ ] Testar todos os botões com o link real da Zuptos (incluindo UTMs) e o checkout no celular.
+- [ ] Conferir se a entrega da Zuptos é mesmo por e-mail (FAQ "Como recebo o guia?" e Termos).
+- [ ] Testar os botões com o link real (com UTMs) e fazer uma compra de teste no celular.
+- [ ] Se o PDF mudar, gerar de novo as imagens de `assets/previas/`.

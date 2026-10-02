@@ -1,2 +1,3 @@
-Coloque aqui a capa e 2 ou 3 páginas reais do PDF final (webp, ~1000px de largura)
-e registre os caminhos em config.js (coverImage e previews).
+Páginas reais do PDF final (Seu-Mapa-Seu-2027-Guia-Interativo-PREMIUM.pdf):
+capa.webp = p. 1 · pagina-trio.webp = p. 6 · pagina-tabela.webp = p. 8 · pagina-fichas.webp = p. 12
+Se o PDF mudar, gere as imagens de novo e mantenha os caminhos em config.js (coverImage e previews).

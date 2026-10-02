@@ -66,7 +66,7 @@
     const img = document.querySelector(".cover-img");
     img.src = cfg.coverImage;
     img.hidden = false;
-    document.querySelector(".cover-placeholder").remove();
+    document.querySelector(".cover-placeholder")?.remove();
     document.querySelector(".hero-cover .pending")?.remove();
   }
 
@@ -107,6 +107,8 @@
       });
       gallery.append(button);
     });
+    gallery.dataset.count = previews.length;
+    document.querySelector("[data-gallery-note]")?.removeAttribute("hidden");
     viewer.querySelector(".viewer-nav").hidden = previews.length < 2;
   }
   viewer.querySelector(".viewer-close").addEventListener("click", () => viewer.close());
@@ -118,6 +120,18 @@
     if (event.key === "ArrowRight") show(current + 1);
     if (event.key === "ArrowLeft") show(current - 1);
   });
+
+  /* ------------------------------------------------------------- Rodapé
+     Identificação e suporte vêm de config.js; vazio = não aparece. */
+  const operator = [cfg.operatorName, cfg.operatorDoc].filter(Boolean).join(" · ");
+  if (operator) document.querySelectorAll("[data-operator]").forEach((el) => { el.textContent = operator; el.hidden = false; });
+  if (cfg.supportEmail) {
+    document.querySelectorAll("[data-support-link]").forEach((a) => {
+      a.href = `mailto:${cfg.supportEmail}`;
+      a.textContent = `Suporte: ${cfg.supportEmail}`;
+      a.hidden = false;
+    });
+  }
 
   /* ---------------------------------------------------------------- FAQ
      <details> nativo; abrir um fecha os outros. */
@@ -175,7 +189,8 @@
   const box = document.querySelector("[data-offer-timer-box]");
   if (box && Number.isFinite(endsAt)) {
     box.querySelector("[data-offer-label]").textContent = cfg.offerLabel || "A oferta termina em";
-    const cells = { h: box.querySelector('[data-t="h"]'), m: box.querySelector('[data-t="m"]'), s: box.querySelector('[data-t="s"]') };
+    const cells = { d: box.querySelector('[data-t="d"]'), h: box.querySelector('[data-t="h"]'), m: box.querySelector('[data-t="m"]'), s: box.querySelector('[data-t="s"]') };
+    const daysCell = box.querySelector("[data-days-cell]");
     const pad = (n) => String(n).padStart(2, "0");
     let timerId;
     const tick = () => {
@@ -186,12 +201,16 @@
         clearInterval(timerId);
         return;
       }
-      const h = Math.floor(left / 3600), m = Math.floor((left % 3600) / 60), s = left % 60;
+      // Com mais de 24h, mostra os dias à parte em vez de "67 horas".
+      const d = Math.floor(left / 86400), h = Math.floor((left % 86400) / 3600), m = Math.floor((left % 3600) / 60), s = left % 60;
+      if (daysCell) daysCell.hidden = d === 0;
+      cells.d.textContent = d;
       cells.h.textContent = pad(h);
       cells.m.textContent = pad(m);
       cells.s.textContent = pad(s);
-      box.setAttribute("aria-label", `${cfg.offerLabel || "A oferta termina em"} ${h} horas e ${m} minutos`);
-      if (inline) inline.innerHTML = `<span class="dot" aria-hidden="true"></span>Oferta termina em <strong>${pad(h)}:${pad(m)}:${pad(s)}</strong>`;
+      const dias = d ? `${d} ${d === 1 ? "dia" : "dias"}, ` : "";
+      box.setAttribute("aria-label", `${cfg.offerLabel || "A oferta termina em"} ${dias}${h} horas e ${m} minutos`);
+      if (inline) inline.innerHTML = `<span class="dot" aria-hidden="true"></span>Oferta termina em <strong>${d ? `${d}d ` : ""}${pad(h)}:${pad(m)}:${pad(s)}</strong>`;
       box.hidden = false;
       if (inline) inline.hidden = false;
     };

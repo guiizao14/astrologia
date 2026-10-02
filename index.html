@@ -10,6 +10,8 @@
     <meta property="og:description" content="Entre em 2027 com mais clareza sobre você. Guia digital interativo em PDF por R$19,90." />
     <meta property="og:type" content="product" />
     <meta property="og:locale" content="pt_BR" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="preload" href="assets/previas/capa.webp" as="image" type="image/webp" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet" />
@@ -48,9 +50,9 @@
           <p class="eyebrow enter" style="--d: 0">Guia digital interativo</p>
           <h1 id="titulo" class="enter" style="--d: 1">Entre em 2027 com mais clareza sobre você.</h1>
           <p class="lede enter" style="--d: 2">
-            Um guia digital para compreender pontos do seu mapa natal, perceber
-            o que faz sentido na sua história e escolher com mais intenção como
-            começar o próximo ciclo.
+            Um guia digital para entender seu Sol, sua Lua e seu Ascendente,
+            perceber o que faz sentido na sua história e escolher com mais
+            intenção como começar o próximo ciclo.
           </p>
           <div class="buy enter" style="--d: 3">
             <p class="social-proof" data-social-proof hidden></p>
@@ -62,14 +64,14 @@
             <a class="cta" href="#comprar" data-checkout>Quero meu guia para o novo ciclo</a>
             <p class="requirement">
               <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" /><path d="M12 7.5v6" /><circle class="fill" cx="12" cy="16.6" r=".9" /></svg>
-              <span><strong>Você precisa ter seu mapa natal calculado.</strong> O guia é um PDF de leitura e reflexão e não calcula as posições.</span>
+              <span><strong>Você usa o seu mapa natal.</strong> O guia não calcula as posições, mas mostra onde gerar o seu mapa e onde encontrar sua hora de nascimento.</span>
             </p>
           </div>
         </div>
 
         <figure class="hero-cover enter" style="--d: 2">
           <div class="cover-glow" aria-hidden="true"></div>
-          <img class="cover-img" alt="Capa do guia Seu Mapa, Seu 2027" hidden />
+          <img class="cover-img" alt="Capa do guia Seu Mapa, Seu 2027" width="900" height="1274" fetchpriority="high" hidden />
           <!-- Capa provisória: só o título, sem conteúdo fictício.
                Some quando config.coverImage for preenchido. -->
           <div class="cover-placeholder" role="img" aria-label="Seu Mapa, Seu 2027, guia digital interativo">
@@ -108,7 +110,7 @@
           <li class="step step-main reveal">
             <span class="step-n" aria-hidden="true">1</span>
             <h3>Tenha seu Sol, sua Lua e seu Ascendente em mãos</h3>
-            <p>Use um mapa natal tropical que você já tem ou posições obtidas separadamente.</p>
+            <p>Use o mapa natal que você já tem ou gere o seu em um site de cálculo astrológico. O guia indica onde.</p>
             <ul class="positions">
               <li>
                 <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="12" /><circle class="fill" cx="20" cy="20" r="2.6" /></svg>
@@ -139,10 +141,10 @@
         <aside class="notice reveal" aria-label="Antes de comprar">
           <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" /><path d="M12 7.5v6" /><circle class="fill" cx="12" cy="16.6" r=".9" /></svg>
           <p>
-            <strong>O guia não calcula o mapa natal.</strong> Tenha suas
-            posições em mãos antes de começar. Sem a hora de nascimento, o
-            Ascendente pode ficar incerto: você trabalha com as posições que
-            conhece.
+            <strong>O guia não calcula o mapa natal.</strong> Ele indica onde
+            gerar o seu (como Astro.com ou Personare) e onde procurar sua hora
+            de nascimento. Sem a hora exata, o Ascendente pode ficar incerto, e
+            o guia explica como trabalhar com as posições que você conhece.
           </p>
         </aside>
       </section>
@@ -155,22 +157,26 @@
         </div>
 
         <div class="get-grid">
-          <!-- PENDENTE: confirmar cada item no PDF final antes de publicar. -->
+          <!-- Conferido com o PDF final (37 páginas, 26 campos preenchíveis). -->
           <ul class="features reveal">
-            <li>Explicações sobre Sol, Lua e Ascendente em linguagem simples.</li>
-            <li>Orientação para juntar suas posições em uma síntese própria.</li>
-            <li>Espaços para registrar suas reflexões e uma intenção para 2027.</li>
-            <li>Guia digital interativo em PDF.</li>
-            <li class="pending-li" data-pending-badge>Conferir esta lista no PDF final</li>
+            <li><strong>36 fichas originais:</strong> os 12 signos em cada lente (Sol, Lua e Ascendente), em linguagem simples, com palavras-chave e perguntas para observar e refletir.</li>
+            <li><strong>Tabela de consulta clicável</strong> que leva direto às suas três fichas.</li>
+            <li><strong>Antes de começar:</strong> onde gerar seu mapa natal, onde achar sua hora de nascimento e o que fazer se ela for incerta.</li>
+            <li><strong>Exercícios preenchíveis</strong> para escrever sua síntese, escolher um próximo passo para 2027 e revisar ao longo do ano.</li>
+            <li><strong>Glossário</strong> com os termos usados, explicados sem complicação.</li>
+            <li><strong>PDF de 37 páginas</strong> para ler no celular ou no computador, ou imprimir.</li>
           </ul>
 
-          <div class="gallery reveal" data-gallery>
-            <!-- Preenchida por app.js a partir de config.previews. -->
-            <div class="gallery-empty">
-              <svg viewBox="0 0 48 48" aria-hidden="true"><rect x="10" y="6" width="28" height="36" rx="3" /><path d="M16 16h16M16 22h16M16 28h10" /></svg>
-              <p>As prévias das páginas do guia aparecem aqui.</p>
-              <span class="pending" data-pending-badge>Inserir 2 ou 3 páginas reais do PDF final</span>
+          <div class="gallery-wrap reveal">
+            <div class="gallery" data-gallery>
+              <!-- Preenchida por app.js a partir de config.previews. -->
+              <div class="gallery-empty">
+                <svg viewBox="0 0 48 48" aria-hidden="true"><rect x="10" y="6" width="28" height="36" rx="3" /><path d="M16 16h16M16 22h16M16 28h10" /></svg>
+                <p>As prévias das páginas do guia aparecem aqui.</p>
+                <span class="pending" data-pending-badge>Inserir 2 ou 3 páginas reais do PDF final</span>
+              </div>
             </div>
+            <p class="gallery-note" data-gallery-note hidden>Páginas reais do guia. Toque para ampliar.</p>
           </div>
         </div>
       </section>
@@ -191,6 +197,7 @@
           <div class="timer" data-offer-timer-box hidden>
             <p class="timer-label" data-offer-label></p>
             <div class="timer-digits" role="timer" aria-live="off">
+              <span data-days-cell hidden><b data-t="d">0</b><small>dias</small></span>
               <span><b data-t="h">00</b><small>horas</small></span>
               <span><b data-t="m">00</b><small>min</small></span>
               <span><b data-t="s">00</b><small>seg</small></span>
@@ -202,9 +209,19 @@
           <p class="social-proof" data-social-proof hidden></p>
           <p class="requirement requirement-center">
             <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" /><path d="M12 7.5v6" /><circle class="fill" cx="12" cy="16.6" r=".9" /></svg>
-            <span>Para usar, tenha seu Sol, sua Lua e seu Ascendente já calculados.</span>
+            <span>Você usa o seu mapa natal. Ainda não tem? O guia mostra onde gerar o seu.</span>
           </p>
           <a class="cta cta-wide" href="#comprar" data-checkout>Quero meu guia para o novo ciclo</a>
+          <ul class="assurances">
+            <li>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5.5" width="18" height="13" rx="2" /><path d="m3.5 7 8.5 6 8.5-6" /></svg>
+              Acesso enviado por e-mail após a confirmação do pagamento
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 4.5 6v5.5c0 4.6 3.2 8.3 7.5 9.5 4.3-1.2 7.5-4.9 7.5-9.5V6L12 3z" /><path d="m8.8 12 2.2 2.2 4.2-4.4" /></svg>
+              7 dias para pedir reembolso, como garante o Código de Defesa do Consumidor
+            </li>
+          </ul>
           <p class="disclaimer">
             Guia digital de interpretação e reflexão. Não inclui cálculo do
             mapa natal, consulta individual ou previsão personalizada.
@@ -217,12 +234,16 @@
         <h2 id="t-faq" class="reveal">Perguntas frequentes</h2>
         <div class="faq-list reveal">
           <details>
-            <summary>Preciso conhecer meu mapa astral para usar o guia?</summary>
-            <div class="answer"><p>Sim. Você precisa ter as posições já calculadas ou obtê-las separadamente. O guia não gera o mapa.</p></div>
+            <summary>Preciso entender de astrologia?</summary>
+            <div class="answer"><p>Não. Cada ficha explica a posição em linguagem simples e o glossário traz os termos usados no guia. Você só precisa do seu mapa natal.</p></div>
+          </details>
+          <details>
+            <summary>Ainda não tenho meu mapa. Consigo usar?</summary>
+            <div class="answer"><p>Sim. O guia não calcula o mapa, mas mostra onde gerar o seu em sites de cálculo astrológico, como Astro.com ou Personare, e quais opções escolher. Você só precisa anotar três signos: Sol, Lua e Ascendente.</p></div>
           </details>
           <details>
             <summary>E se eu não souber minha hora de nascimento?</summary>
-            <div class="answer"><p>O Ascendente pode ficar incerto. Você pode trabalhar com as posições confirmadas e sinalizar as dúvidas.</p></div>
+            <div class="answer"><p>O Ascendente pode ficar incerto. O guia mostra onde procurar a hora (certidão, Declaração de Nascido Vivo, caderneta de saúde) e como seguir com as posições confirmadas, marcando o Ascendente como não confirmado.</p></div>
           </details>
           <details>
             <summary>O material prevê o que vai acontecer comigo em 2027?</summary>
@@ -233,9 +254,17 @@
             <div class="answer"><p>Não. É um guia autoguiado: você lê, relaciona as informações com a sua experiência e escreve a sua própria síntese.</p></div>
           </details>
           <details>
-            <summary>Como recebo e uso o material?</summary>
-            <!-- PENDENTE: responder só depois de configurar a entrega na Zuptos. -->
-            <div class="answer"><p>O guia é um arquivo PDF. <span class="pending inline" data-pending-badge>Completar com o fluxo real de entrega da Zuptos</span></p></div>
+            <summary>Como recebo o guia?</summary>
+            <!-- Conferir com a entrega configurada na Zuptos: se mudar, ajuste aqui e nos Termos. -->
+            <div class="answer"><p>Depois que o pagamento é confirmado, você recebe no e-mail usado na compra o acesso para baixar o PDF. Se não encontrar, confira também a caixa de spam e as abas Promoções ou Atualizações.</p></div>
+          </details>
+          <details>
+            <summary>Consigo preencher pelo celular?</summary>
+            <div class="answer"><p>Sim. Para digitar nos campos, abra o PDF em um leitor compatível com formulários, como o Adobe Acrobat Reader, que é gratuito para celular e computador. Depois, salve uma cópia com as suas respostas. Se preferir, imprima e escreva à mão.</p></div>
+          </details>
+          <details>
+            <summary>E se eu não gostar?</summary>
+            <div class="answer"><p>Você tem 7 dias, contados da compra, para pedir o reembolso, como garante o Código de Defesa do Consumidor. É só pedir pelo canal de suporte que aparece no e-mail da compra.</p></div>
           </details>
         </div>
       </section>
@@ -244,8 +273,13 @@
     <footer class="footer">
       <div class="wrap footer-inner">
         <span class="wordmark small">Seu Mapa, <em>Seu 2027</em></span>
-        <!-- PENDENTE: nome da operação, e-mail de suporte e links legais. -->
-        <p><span class="pending inline" data-pending-badge>Inserir identificação da operação, suporte e links legais</span></p>
+        <!-- Nome, documento e e-mail de suporte vêm de config.js. -->
+        <nav class="footer-links" aria-label="Informações legais">
+          <a href="termos.html">Termos de uso</a>
+          <a href="privacidade.html">Política de privacidade</a>
+          <a data-support-link hidden>Suporte</a>
+        </nav>
+        <p class="footer-operator" data-operator hidden></p>
         <p class="footer-note">
           Conteúdo de autoconhecimento que usa a astrologia como linguagem
           simbólica. Não substitui orientação profissional.

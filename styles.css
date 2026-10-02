@@ -302,10 +302,15 @@ em { font-style: italic; }
   content: ""; position: absolute; left: 4px; top: 0.62em; width: 10px; height: 10px; border-radius: 50%;
   border: 1px solid var(--gold); box-shadow: inset 0 0 0 2.5px var(--bg), inset 0 0 0 10px var(--gold);
 }
+.features strong { color: var(--ivory); font-weight: 600; }
 .features .pending-li { padding-left: 0; }
 .features .pending-li::before { display: none; }
 
+.gallery-wrap { display: grid; gap: 12px; }
 .gallery { display: grid; gap: 12px; grid-template-columns: repeat(2, 1fr); }
+/* Com três páginas, ficam as três lado a lado também no celular. */
+.gallery[data-count="3"] { grid-template-columns: repeat(3, 1fr); }
+.gallery-note { font-size: 0.9rem; color: var(--ivory-faint); text-align: center; }
 .gallery-empty {
   grid-column: 1 / -1; display: grid; justify-items: center; gap: 12px; text-align: center;
   padding: 44px 24px; border-radius: 16px; border: 1px dashed var(--line);
@@ -344,6 +349,12 @@ em { font-style: italic; }
 .offer h2 { max-width: 15em; }
 .offer-text { color: var(--ivory-soft); max-width: 32em; }
 .offer-price { font: 500 2.75rem/1 var(--serif); color: var(--ivory); margin-top: 6px; }
+.assurances {
+  list-style: none; margin: 2px 0 0; padding: 0; display: grid; gap: 8px; justify-items: start;
+  text-align: left; font-size: 0.95rem; line-height: 1.45; color: var(--ivory-soft);
+}
+.assurances li { display: grid; grid-template-columns: 20px 1fr; gap: 10px; align-items: start; }
+.assurances svg { width: 20px; height: 20px; margin-top: 1px; fill: none; stroke: var(--gold); stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
 .disclaimer { font-size: 0.98rem; color: var(--ivory-soft); max-width: 30em; }
 
 /* ---------------------------------------------------------------- FAQ */
@@ -371,7 +382,24 @@ em { font-style: italic; }
 /* ------------------------------------------------------------- Rodapé */
 .footer { border-top: 1px solid var(--line-soft); padding-block: 36px 44px; }
 .footer-inner { display: grid; gap: 12px; }
+.footer-links { display: flex; flex-wrap: wrap; gap: 6px 22px; font-size: 0.92rem; }
+.footer-links a { color: var(--ivory-soft); text-decoration: underline; text-decoration-color: var(--line); text-underline-offset: 4px; }
+.footer-links a:hover { color: var(--gold-hot); text-decoration-color: currentColor; }
+.footer-operator { font-size: 0.88rem; color: var(--ivory-soft); }
 .footer-note { font-size: 0.88rem; color: var(--ivory-faint); max-width: 40em; }
+
+/* ------------------------------------------------- Termos e Privacidade */
+.legal { max-width: 760px; padding-block: clamp(28px, 6vw, 64px) var(--section); }
+.legal .back { display: inline-block; margin-bottom: 28px; color: var(--gold); font-size: 0.95rem; text-decoration: none; }
+.legal .back:hover { color: var(--gold-hot); }
+.legal h1 { font-size: clamp(2rem, 1.5rem + 2vw, 2.7rem); }
+.legal .updated { margin-top: 10px; font-size: 0.92rem; color: var(--ivory-faint); }
+.legal h2 { font-size: 1.45rem; margin-top: 40px; }
+.legal p, .legal li { color: var(--ivory-soft); }
+.legal p { margin-top: 12px; }
+.legal ul { margin: 12px 0 0; padding-left: 1.2em; display: grid; gap: 8px; }
+.legal strong { color: var(--ivory); font-weight: 600; }
+.legal a { color: var(--gold-hot); }
 
 /* ------------------------------------------------------- Visualizador */
 .viewer {
@@ -528,6 +556,15 @@ em { font-style: italic; }
   /* Telas pequenas: o aviso do mapa precisa caber na primeira dobra. */
   .hero-copy { gap: 14px; }
   .buy { gap: 10px; margin-top: 4px; }
+}
+@media (max-width: 480px) {
+  /* Timer com dias: quatro caixas precisam caber dentro do cartão. */
+  .timer-digits { gap: 6px; }
+  .timer-digits span { min-width: 58px; padding: 9px 4px 7px; }
+  .timer-digits b { font-size: 1.7rem; }
+  .timer-digits small { font-size: 0.7rem; letter-spacing: 0.04em; }
+  .gallery { gap: 8px; }
+  .thumb::after { right: 5px; bottom: 5px; padding: 4px 7px; font-size: 0.68rem; }
 }
 @media (max-width: 599px) {
   /* Celular: passos em linha e posições compactas para encurtar a rolagem. */
