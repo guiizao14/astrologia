@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Seu Mapa, Seu 2027 — Guia digital interativo</title>
+    <meta name="description" content="Entre em 2027 com mais clareza sobre você. Guia digital interativo em PDF para refletir sobre Sol, Lua e Ascendente e escolher uma intenção para o novo ciclo. R$19,90." />
+    <meta name="theme-color" content="#0b0d18" />
+    <meta property="og:title" content="Seu Mapa, Seu 2027" />
+    <meta property="og:description" content="Entre em 2027 com mais clareza sobre você. Guia digital interativo em PDF por R$19,90." />
+    <meta property="og:type" content="product" />
+    <meta property="og:locale" content="pt_BR" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="config.js"></script>
+    <script>document.documentElement.classList.add("js"); if (new URLSearchParams(location.search).has("movimento")) document.documentElement.classList.add("force-motion");</script>
+  </head>
+  <body>
+    <a class="skip" href="#conteudo">Pular para o conteúdo</a>
+
+    <!-- Céu de fundo: SVG leve e decorativo. -->
+    <div class="sky" aria-hidden="true">
+      <svg class="orbits" viewBox="0 0 1000 1000" preserveAspectRatio="xMidYMid slice">
+        <g class="orbit-spin">
+          <circle cx="760" cy="300" r="210" />
+          <circle cx="760" cy="300" r="330" />
+          <circle class="orbit-dot" cx="1090" cy="300" r="2.6" />
+        </g>
+        <ellipse cx="760" cy="300" rx="470" ry="180" transform="rotate(-18 760 300)" />
+      </svg>
+      <div class="stars"></div>
+      <!-- Estrelas cadentes: rastros finos, raros, atrás de tudo. -->
+      <i class="meteor m1"></i><i class="meteor m2"></i><i class="meteor m3"></i><i class="meteor m4"></i>
+    </div>
+
+    <header class="topbar">
+      <div class="wrap">
+        <span class="wordmark">Seu Mapa, <em>Seu 2027</em></span>
+      </div>
+    </header>
+
+    <main id="conteudo">
+      <!-- 1. HERO -->
+      <section class="hero wrap" aria-labelledby="titulo">
+        <div class="hero-copy">
+          <p class="eyebrow enter" style="--d: 0">Guia digital interativo</p>
+          <h1 id="titulo" class="enter" style="--d: 1">Entre em 2027 com mais clareza sobre você.</h1>
+          <p class="lede enter" style="--d: 2">
+            Um guia digital para compreender pontos do seu mapa natal, perceber
+            o que faz sentido na sua história e escolher com mais intenção como
+            começar o próximo ciclo.
+          </p>
+          <div class="buy enter" style="--d: 3">
+            <p class="social-proof" data-social-proof hidden></p>
+            <p class="price">
+              <strong class="price-value">R$19,90</strong>
+              <span class="price-name">Seu Mapa, Seu 2027</span>
+            </p>
+            <p class="timer-inline" data-offer-timer hidden></p>
+            <a class="cta" href="#comprar" data-checkout>Quero meu guia para o novo ciclo</a>
+            <p class="requirement">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" /><path d="M12 7.5v6" /><circle class="fill" cx="12" cy="16.6" r=".9" /></svg>
+              <span><strong>Você precisa ter seu mapa natal calculado.</strong> O guia é um PDF de leitura e reflexão e não calcula as posições.</span>
+            </p>
+          </div>
+        </div>
+
+        <figure class="hero-cover enter" style="--d: 2">
+          <div class="cover-glow" aria-hidden="true"></div>
+          <img class="cover-img" alt="Capa do guia Seu Mapa, Seu 2027" hidden />
+          <!-- Capa provisória: só o título, sem conteúdo fictício.
+               Some quando config.coverImage for preenchido. -->
+          <div class="cover-placeholder" role="img" aria-label="Seu Mapa, Seu 2027, guia digital interativo">
+            <span class="cp-top">Guia digital interativo</span>
+            <svg class="cp-orbit" viewBox="0 0 200 200" aria-hidden="true">
+              <circle cx="100" cy="100" r="58" />
+              <circle cx="100" cy="100" r="86" />
+              <circle class="cp-sun" cx="100" cy="100" r="8" />
+              <circle class="cp-dot" cx="186" cy="100" r="3.2" />
+            </svg>
+            <span class="cp-title">Seu Mapa,<em>Seu 2027</em></span>
+            <span class="cp-sub">Sol · Lua · Ascendente</span>
+          </div>
+          <span class="pending" data-pending-badge>Capa provisória: trocar pela capa final</span>
+        </figure>
+      </section>
+
+      <!-- 2. OBJEÇÃO -->
+      <section class="shift wrap reveal" aria-labelledby="t-shift">
+        <h2 id="t-shift">Nem toda pergunta sobre 2027 precisa de uma previsão.</h2>
+        <p>
+          Em vez de outra lista dizendo o que vai acontecer, você usa as
+          posições do seu mapa como ponto de partida para
+          <strong>refletir sobre a sua experiência e escolher uma intenção para 2027.</strong>
+        </p>
+      </section>
+
+      <!-- 3. COMO FUNCIONA -->
+      <section class="how wrap" aria-labelledby="t-how">
+        <div class="section-head reveal">
+          <p class="eyebrow">Como funciona</p>
+          <h2 id="t-how">Três passos, no seu ritmo.</h2>
+        </div>
+
+        <ol class="steps">
+          <li class="step step-main reveal">
+            <span class="step-n" aria-hidden="true">1</span>
+            <h3>Tenha seu Sol, sua Lua e seu Ascendente em mãos</h3>
+            <p>Use um mapa natal tropical que você já tem ou posições obtidas separadamente.</p>
+            <ul class="positions">
+              <li>
+                <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="12" /><circle class="fill" cx="20" cy="20" r="2.6" /></svg>
+                <span><strong>Sol</strong> o que move você e como você se expressa.</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M25 7.5a13 13 0 1 0 0 25a10.5 10.5 0 0 1 0-25z" /></svg>
+                <span><strong>Lua</strong> suas emoções e do que você precisa para se sentir bem.</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M6 28h28" /><path d="M20 28V12m-6 6 6-6 6 6" /></svg>
+                <span><strong>Ascendente</strong> como você se apresenta e começa as coisas.</span>
+              </li>
+            </ul>
+          </li>
+          <li class="step reveal">
+            <span class="step-n" aria-hidden="true">2</span>
+            <h3>Leia e relacione</h3>
+            <p>Consulte as explicações de cada posição e compare com a sua própria experiência.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step-n" aria-hidden="true">3</span>
+            <h3>Registre seu próximo passo</h3>
+            <p>Escreva sua síntese e uma intenção prática para começar 2027.</p>
+          </li>
+        </ol>
+
+        <aside class="notice reveal" aria-label="Antes de comprar">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" /><path d="M12 7.5v6" /><circle class="fill" cx="12" cy="16.6" r=".9" /></svg>
+          <p>
+            <strong>O guia não calcula o mapa natal.</strong> Tenha suas
+            posições em mãos antes de começar. Sem a hora de nascimento, o
+            Ascendente pode ficar incerto: você trabalha com as posições que
+            conhece.
+          </p>
+        </aside>
+      </section>
+
+      <!-- 4. O QUE VOCÊ RECEBE -->
+      <section class="get wrap" aria-labelledby="t-get">
+        <div class="section-head reveal">
+          <p class="eyebrow">O que você recebe</p>
+          <h2 id="t-get">Um guia para ler, refletir e preencher no seu ritmo.</h2>
+        </div>
+
+        <div class="get-grid">
+          <!-- PENDENTE: confirmar cada item no PDF final antes de publicar. -->
+          <ul class="features reveal">
+            <li>Explicações sobre Sol, Lua e Ascendente em linguagem simples.</li>
+            <li>Orientação para juntar suas posições em uma síntese própria.</li>
+            <li>Espaços para registrar suas reflexões e uma intenção para 2027.</li>
+            <li>Guia digital interativo em PDF.</li>
+            <li class="pending-li" data-pending-badge>Conferir esta lista no PDF final</li>
+          </ul>
+
+          <div class="gallery reveal" data-gallery>
+            <!-- Preenchida por app.js a partir de config.previews. -->
+            <div class="gallery-empty">
+              <svg viewBox="0 0 48 48" aria-hidden="true"><rect x="10" y="6" width="28" height="36" rx="3" /><path d="M16 16h16M16 22h16M16 28h10" /></svg>
+              <p>As prévias das páginas do guia aparecem aqui.</p>
+              <span class="pending" data-pending-badge>Inserir 2 ou 3 páginas reais do PDF final</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. FECHAMENTO -->
+      <section class="close wrap reveal" id="comprar" aria-labelledby="t-close">
+        <div class="offer">
+          <div class="offer-orbit" aria-hidden="true"></div>
+          <p class="eyebrow">Seu Mapa, Seu 2027</p>
+          <h2 id="t-close">Comece o novo ciclo com uma conversa mais clara com você.</h2>
+          <p class="offer-text">
+            Um guia digital para ler suas posições, relacioná-las com a sua
+            história e escrever a intenção que vai guiar seus primeiros passos
+            em 2027.
+          </p>
+          <!-- Timer da oferta: conta até config.offerEndsAt, igual para todos.
+               Não reinicia; ao terminar, some. -->
+          <div class="timer" data-offer-timer-box hidden>
+            <p class="timer-label" data-offer-label></p>
+            <div class="timer-digits" role="timer" aria-live="off">
+              <span><b data-t="h">00</b><small>horas</small></span>
+              <span><b data-t="m">00</b><small>min</small></span>
+              <span><b data-t="s">00</b><small>seg</small></span>
+            </div>
+            <span class="pending" data-pending-badge data-timer-demo-badge hidden>Timer de demonstração: definir data fim antes de publicar</span>
+          </div>
+          <p class="days-left" data-days-left hidden></p>
+          <p class="offer-price">R$19,90</p>
+          <p class="social-proof" data-social-proof hidden></p>
+          <p class="requirement requirement-center">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" /><path d="M12 7.5v6" /><circle class="fill" cx="12" cy="16.6" r=".9" /></svg>
+            <span>Para usar, tenha seu Sol, sua Lua e seu Ascendente já calculados.</span>
+          </p>
+          <a class="cta cta-wide" href="#comprar" data-checkout>Quero meu guia para o novo ciclo</a>
+          <p class="disclaimer">
+            Guia digital de interpretação e reflexão. Não inclui cálculo do
+            mapa natal, consulta individual ou previsão personalizada.
+          </p>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="faq wrap" aria-labelledby="t-faq">
+        <h2 id="t-faq" class="reveal">Perguntas frequentes</h2>
+        <div class="faq-list reveal">
+          <details>
+            <summary>Preciso conhecer meu mapa astral para usar o guia?</summary>
+            <div class="answer"><p>Sim. Você precisa ter as posições já calculadas ou obtê-las separadamente. O guia não gera o mapa.</p></div>
+          </details>
+          <details>
+            <summary>E se eu não souber minha hora de nascimento?</summary>
+            <div class="answer"><p>O Ascendente pode ficar incerto. Você pode trabalhar com as posições confirmadas e sinalizar as dúvidas.</p></div>
+          </details>
+          <details>
+            <summary>O material prevê o que vai acontecer comigo em 2027?</summary>
+            <div class="answer"><p>Não. 2027 é o contexto para exercícios de reflexão e para definir uma intenção.</p></div>
+          </details>
+          <details>
+            <summary>É uma leitura personalizada feita para mim?</summary>
+            <div class="answer"><p>Não. É um guia autoguiado: você lê, relaciona as informações com a sua experiência e escreve a sua própria síntese.</p></div>
+          </details>
+          <details>
+            <summary>Como recebo e uso o material?</summary>
+            <!-- PENDENTE: responder só depois de configurar a entrega na Zuptos. -->
+            <div class="answer"><p>O guia é um arquivo PDF. <span class="pending inline" data-pending-badge>Completar com o fluxo real de entrega da Zuptos</span></p></div>
+          </details>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="wrap footer-inner">
+        <span class="wordmark small">Seu Mapa, <em>Seu 2027</em></span>
+        <!-- PENDENTE: nome da operação, e-mail de suporte e links legais. -->
+        <p><span class="pending inline" data-pending-badge>Inserir identificação da operação, suporte e links legais</span></p>
+        <p class="footer-note">
+          Conteúdo de autoconhecimento que usa a astrologia como linguagem
+          simbólica. Não substitui orientação profissional.
+        </p>
+      </div>
+    </footer>
+
+    <dialog class="viewer" aria-label="Página do guia ampliada">
+      <button class="viewer-close" type="button" aria-label="Fechar">×</button>
+      <div class="viewer-stage"><img alt="" /></div>
+      <div class="viewer-nav">
+        <button type="button" data-step="-1" aria-label="Página anterior">←</button>
+        <span class="viewer-count"></span>
+        <button type="button" data-step="1" aria-label="Próxima página">→</button>
+      </div>
+    </dialog>
+
+    <div class="toast" role="status" aria-live="polite"></div>
+    <script src="app.js" defer></script>
+  </body>
+</html>

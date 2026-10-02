@@ -1,0 +1,2 @@
+Coloque aqui a capa e 2 ou 3 páginas reais do PDF final (webp, ~1000px de largura)
+e registre os caminhos em config.js (coverImage e previews).
