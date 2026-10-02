@@ -37,7 +37,7 @@ window.SEU_MAPA = {
 
   // MODO DEMONSTRAÇÃO (só para apresentar): o timer recomeça em 24h a cada
   // carregamento e ignora offerEndsAt. Nunca publique com true.
-  timerDemo: false,
+  timerDemo: true,
   timerDemoHours: 24,
   offerLabel: "A oferta por R$19,90 termina em",
 
