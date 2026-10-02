@@ -34,7 +34,6 @@ repositório, sem comando de build.
 Em `config.js`:
 
 - [ ] `checkoutUrl`: link real do checkout Zuptos. Sem ele, os botões só mostram um aviso.
-- [ ] `timerDemo: false` e `offerEndsAt` com a data real de término. Hoje o timer está em **modo demonstração** e recomeça em 24h a cada carregamento.
 - [ ] `metaPixelId`: ID do Meta Pixel. `Purchase` fica com o checkout, nunca com o clique.
 - [ ] `coverImage` e `previews`: capa e páginas reais do PDF final.
 - [ ] `showPendingBadges: false` para esconder as etiquetas de pendência.
