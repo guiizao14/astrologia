@@ -40,9 +40,10 @@ repositório, sem comando de build.
 - [x] Aviso do mapa natal: o guia não calcula, mas indica onde gerar (como no PDF, p. 5).
 - [x] FAQ completo, incluindo entrega por e-mail, uso no celular e reembolso em 7 dias (CDC, art. 49).
 - [x] Rodapé com Termos de uso e Política de privacidade.
-- [x] Timer de demonstração desligado: conta até `offerEndsAt`, igual para todos, e some no fim.
+- [ ] Timer: está em modo demonstração (24h, reinicia a cada visita) durante a revisão. Antes do tráfego, mudar `timerDemo` para `false` e definir `offerEndsAt` com a data real.
 - [x] Etiquetas de pendência escondidas (`showPendingBadges: false`).
-- [x] Coerência com o anúncio em vídeo: Sol, Lua e Ascendente, "novo ciclo", 2027 e R$19,90.
+- [x] Coerência com o anúncio em vídeo: Sol, Lua e Ascendente, 2027 e R$19,90 ("novo ciclo" trocado por "2027": "ciclo" sugere Revolução Solar).
+- [x] Capa e prévias refeitas a partir do PDF corrigido em 02/10/2026.
 
 ## Falta (só você tem esses dados)
 
