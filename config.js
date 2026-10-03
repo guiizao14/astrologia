@@ -11,8 +11,8 @@ window.SEU_MAPA = {
   // Repassa utm_*, fbclid etc. da página para o checkout, se a Cakto aceitar.
   preserveUtms: true,
 
-  // PENDENTE: ID do Meta Pixel. Vazio = nenhum script de rastreamento carrega.
-  metaPixelId: "",
+  // ID do Meta Pixel (conjunto de dados "Pixel Seu Mapa 2027", BM ASTRO).
+  metaPixelId: "1089557760386504",
 
   // Evento do clique no botão. Se a Cakto já dispara InitiateCheckout pelo
   // próprio pixel, mantenha o evento customizado para não duplicar.
