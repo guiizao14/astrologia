@@ -49,13 +49,13 @@ repositório, sem comando de build.
 
 Em `config.js`:
 
-- [ ] `checkoutUrl`: link real do checkout Zuptos. Sem ele, os botões só mostram um aviso.
+- [x] `checkoutUrl`: checkout da Cakto (https://pay.cakto.com.br/jqsd53d_1167056), total de R$ 19,90 (R$ 18,91 + R$ 0,99 de taxa de serviço).
 - [ ] `metaPixelId`: ID do Meta Pixel. `Purchase` fica com o checkout, nunca com o clique.
 - [ ] `operatorName`, `operatorDoc` e `supportEmail`: quem vende (nome e CPF/CNPJ) e o e-mail de suporte.
-- [ ] `offerEndsAt`: confirmar a data de fim da oferta (hoje: 05/10/2026, 14h). O preço precisa mudar de verdade na Zuptos quando o timer acabar.
+- [ ] `offerEndsAt`: confirmar a data de fim da oferta (hoje: 05/10/2026, 14h). O preço precisa mudar de verdade na Cakto quando o timer acabar.
 
 Depois de configurar:
 
-- [ ] Conferir se a entrega da Zuptos é mesmo por e-mail (FAQ "Como recebo o guia?" e Termos).
+- [ ] Conferir se a entrega da Cakto é mesmo por e-mail (FAQ "Como recebo o guia?" e Termos).
 - [ ] Testar os botões com o link real (com UTMs) e fazer uma compra de teste no celular.
 - [ ] Se o PDF mudar, gerar de novo as imagens de `assets/previas/`.

@@ -4,17 +4,17 @@
    liberar tráfego.
    ===================================================================== */
 window.SEU_MAPA = {
-  // PENDENTE: URL real do checkout Zuptos deste produto. Enquanto vazia,
+  // Checkout da Cakto deste produto (total R$ 19,90). Se ficar vazio,
   // nenhum botão leva a lugar nenhum e a página avisa que falta o link.
-  checkoutUrl: "",
+  checkoutUrl: "https://pay.cakto.com.br/jqsd53d_1167056",
 
-  // Repassa utm_*, fbclid etc. da página para o checkout, se a Zuptos aceitar.
+  // Repassa utm_*, fbclid etc. da página para o checkout, se a Cakto aceitar.
   preserveUtms: true,
 
   // PENDENTE: ID do Meta Pixel. Vazio = nenhum script de rastreamento carrega.
   metaPixelId: "",
 
-  // Evento do clique no botão. Se a Zuptos já dispara InitiateCheckout pelo
+  // Evento do clique no botão. Se a Cakto já dispara InitiateCheckout pelo
   // próprio pixel, mantenha o evento customizado para não duplicar.
   // Purchase NUNCA é disparado aqui: só o checkout confirma compra.
   clickEvent: { name: "CliqueCheckout", custom: true },
@@ -31,7 +31,7 @@ window.SEU_MAPA = {
 
   // TIMER DA OFERTA: data e hora reais de término, iguais para todos os
   // visitantes. Não reinicia ao recarregar. Quando chega a zero, o timer some.
-  // Ao terminar, a condição precisa mudar de verdade na Zuptos; para uma nova
+  // Ao terminar, a condição precisa mudar de verdade na Cakto; para uma nova
   // campanha, troque a data aqui. Vazio = sem timer.
   offerEndsAt: "2026-10-05T14:00:00-03:00",
 

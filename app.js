@@ -34,7 +34,7 @@
       track(cfg.clickEvent);
       if (!href) {
         event.preventDefault();
-        notify("Checkout Zuptos ainda não configurado: preencha checkoutUrl em config.js.");
+        notify("Checkout ainda não configurado: preencha checkoutUrl em config.js.");
       }
     });
   });
